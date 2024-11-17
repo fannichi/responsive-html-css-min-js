@@ -36,3 +36,19 @@ const observer = new IntersectionObserver(
   }
 );
 observer.observe(document.querySelector('.section-hero'));
+
+const pills = document.querySelectorAll('.pill');
+
+let activeIndex = -1; // To track the current active pill
+
+const interval = setInterval(() => {
+  // Reset the scale of the previously active pill
+  if (activeIndex !== -1) {
+    pills[activeIndex].style.transform = 'scale(1)';
+  }
+
+  // Pick a new random pill
+  activeIndex = Math.floor(Math.random() * pills.length);
+  pills[activeIndex].style.transform = 'scale(1.1)';
+  pills[activeIndex].style.transition = 'transform 0.3s ease';
+}, 750);
