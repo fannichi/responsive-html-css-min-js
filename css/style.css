@@ -1,5 +1,18 @@
 /* Navigation */
 
+.logo-link {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.logo-link span {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #cf711f;
+}
+
 .main-nav-list {
     display: flex;
     list-style: none;
